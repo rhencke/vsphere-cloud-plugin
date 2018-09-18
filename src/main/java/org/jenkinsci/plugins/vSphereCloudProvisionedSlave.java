@@ -136,7 +136,7 @@ public class vSphereCloudProvisionedSlave extends vSphereCloudSlave {
 
         public List<Descriptor<ComputerLauncher>> getComputerLauncherDescriptors() {
             List<Descriptor<ComputerLauncher>> result = new ArrayList<Descriptor<ComputerLauncher>>();
-            for (Descriptor<ComputerLauncher> launcher : Functions.getComputerLauncherDescriptors()) {
+            for (Descriptor<ComputerLauncher> launcher : Jenkins.get().getDescriptorList(ComputerLauncher.class)) {
                 if (!vSphereCloudLauncher.class.isAssignableFrom(launcher.clazz)) {
                     result.add(launcher);
                 }
