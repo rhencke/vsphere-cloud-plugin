@@ -9,11 +9,11 @@
             <f:textbox/>
         </f:entry>
 
+        <f:entry title="${%Master Image Name}" field="masterImageName">
+            <f:textbox/>
+        </f:entry>
+            
         <f:advanced>
-
-            <f:entry title="${%Master Image Name}" field="masterImageName">
-                <f:textbox/>
-            </f:entry>
 
             <f:optionalBlock title="${%Use Snapshot}" field="useSnapshot" inline="true">
                 <f:entry title="${%Snapshot Name}" field="snapshotName">
